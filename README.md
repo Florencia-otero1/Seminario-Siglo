@@ -7,15 +7,14 @@ El proyecto propone el desarrollo de un **sistema informático para la gestión 
 El objetivo principal es brindar una solución tecnológica que permita **centralizar la información**, **optimizar la comunicación entre los usuarios** (dueños, rescatistas, refugios y voluntarios) y **favorecer la adopción y el bienestar animal** mediante herramientas digitales accesibles y confiables.  
 
 ## ⚙️ Tecnologías Utilizadas  
-- **Lenguaje:** Java  
+
 - **Base de Datos:** MySQL  
-- **Entorno de desarrollo:** IntelliJ IDEA / NetBeans / Eclipse  
 - **Modelo UML:** Diagramas de casos de uso, clases, secuencia, paquetes y despliegue  
 - **Control de versiones:** GitHub  
 
 ## 🗃️ Estructura del Repositorio  
 
-- **TP2-FlorenciaOtero.pdf:** documento completo con análisis, diseño, implementación y pruebas  
+- **«OTERO-FLORENCIA»-AP2.pdf:** documento completo con análisis, diseño, implementación y pruebas  
 - **SQL/**
   - *CreacionTablas.sql:* script de creación de tablas MySQL  
   - *InsercionDatos.sql:* inserciones de datos de prueba  
