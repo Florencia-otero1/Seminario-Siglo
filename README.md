@@ -15,13 +15,12 @@ El objetivo principal es brindar una solución tecnológica que permita **centra
 
 ## 🗃️ Estructura del Repositorio  
 
-SistemaGestion/
-├── TP2-FlorenciaOtero.pdf → Documento completo con análisis, diseño, implementación y pruebas
-├── SQL/
-│ ├── CreacionTablas.sql → Script de creación de tablas MySQL
-│ ├── InsercionDatos.sql → Script con inserciones de datos de prueba
-│ ├── Consultas.sql → Script con consultas y pruebas de funcionamiento
-├── README.md → Descripción general del proyecto
+- **TP2-FlorenciaOtero.pdf:** documento completo con análisis, diseño, implementación y pruebas  
+- **SQL/**
+  - *CreacionTablas.sql:* script de creación de tablas MySQL  
+  - *InsercionDatos.sql:* inserciones de datos de prueba  
+  - *Consultas.sql:* consultas y pruebas de funcionamiento  
+- **README.md:** descripción general del proyecto
 
 ## 👩‍💻 Autor  
 - **Florencia Otero** — Estudiante de Licenciatura en Informática  
