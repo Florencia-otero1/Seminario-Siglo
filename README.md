@@ -84,6 +84,7 @@ Project Root
 │        ├─ config.properties
 │        └─ com/example/app/   (vistas .fxml)
 └─ README.md
+```
 
 ## ✅ Estado del Proyecto  
 ✔ Base de datos configurada y operativa  
