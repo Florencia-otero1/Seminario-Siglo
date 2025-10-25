@@ -1,28 +1,97 @@
 # 🐾 Sistema de Gestión y Difusión de Mascotas Perdidas  
 
 ## 📘 Contexto del Proyecto  
-Este repositorio forma parte del **Trabajo Práctico Integrador** correspondiente a la materia **Seminario de Práctica de Informática**, de la carrera **Licenciatura en Informática**.  
-El proyecto propone el desarrollo de un **sistema informático para la gestión y difusión de mascotas perdidas y animales callejeros** en la ciudad de Córdoba, aplicando el **Proceso Unificado de Desarrollo (PUD)** como metodología de trabajo.  
+Este proyecto forma parte del **Trabajo Práctico Integrador** de la materia **Seminario de Práctica de Informática**, correspondiente a la **Licenciatura en Informática** (Universidad Siglo 21).
 
-El objetivo principal es brindar una solución tecnológica que permita **centralizar la información**, **optimizar la comunicación entre los usuarios** (dueños, rescatistas, refugios y voluntarios) y **favorecer la adopción y el bienestar animal** mediante herramientas digitales accesibles y confiables.  
+El sistema permite **registrar casos de mascotas perdidas o encontradas**, **difundirlos públicamente**, **gestionar reportes** (rol administrador) y **registrar donaciones**.  
+Su propósito es **centralizar la información** y facilitar la **colaboración comunitaria** para ayudar en la recuperación y bienestar de los animales.
+
+El desarrollo siguió el **Proceso Unificado de Desarrollo (PUD)**, aplicando análisis, diseño y construcción incremental.
+
+---
 
 ## ⚙️ Tecnologías Utilizadas  
 
-- **Base de Datos:** MySQL  
-- **Modelo UML:** Diagramas de casos de uso, clases, secuencia, paquetes y despliegue  
-- **Control de versiones:** GitHub  
+| Tecnología | Rol en el Sistema |
+|---|---|
+| **Java (POO)** | Lógica principal y estructura del sistema |
+| **JavaFX + FXML** | Desarrollo de la interfaz gráfica (Vistas) |
+| **MySQL** | Base de datos relacional para persistencia |
+| **JDBC** | Conexión y consultas a la base de datos |
+| **MVC + DAO** | Arquitectura del software |
+| **Git y GitHub** | Control y gestión de versiones |
 
-## 🗃️ Estructura del Repositorio  
+---
 
-- **«OTERO-FLORENCIA»-AP2.pdf:** documento completo con análisis, diseño, implementación y pruebas  
-- **SQL/**
-  - *CreacionTablas.sql:* script de creación de tablas MySQL  
-  - *InsercionDatos.sql:* inserciones de datos de prueba  
-  - *Consultas.sql:* consultas y pruebas de funcionamiento  
-- **README.md:** descripción general del proyecto
+## 🏛️ Arquitectura del Sistema  
 
-## 👩‍💻 Autor  
-- **Florencia Otero** — Estudiante de Licenciatura en Informática  
-- **Materia:** Seminario de Práctica de Informática  
-- **Institución:** Universidad Siglo 21  
-- **Año:** 2025 
+La aplicación se desarrolló bajo arquitectura **MVC + DAO**, asegurando separación clara de responsabilidades.
+
+### **Modelo (Model)**  
+Clases que representan entidades reales:
+- `Usuario`
+- `Administrador` (hereda de `Usuario`)
+- `Reporte`
+- `Donacion`
+
+### **Vista (View)**  
+Pantallas desarrolladas con JavaFX (`.fxml`):
+- `admin-gestion-reportes.fxml`
+- `difusion-view.fxml`
+- `donacion-view.fxml`
+- `login-view.fxml`
+- `menu-principal.fxml`
+- `registro-view.fxml`
+- `reporte-view.fxml`
+
+### **Controladores (Controller)**  
+Manejan acciones del usuario, validaciones y comunicación entre vista y modelo:
+- `LoginController`
+- `MenuPrincipalController`
+- `ReporteController`
+- `AdminGestionReportesController`
+- `DonacionController`
+- `DifusionController`
+- `RegistroController`
+
+### **DAO (Data Access Object)**  
+Clases encargadas de ejecutar consultas SQL utilizando **JDBC**:
+- `UsuarioDAO`
+- `ReporteDAO`
+- `DonacionDAO`
+
+La conexión se gestiona mediante `ConexionBD.java` y un archivo de propiedades configurable.
+
+---
+
+## 🗃️ Estructura del Proyecto
+/src
+└── com/example/app
+├── controllers/ → Controladores JavaFX
+├── models/ → Clases del modelo (POO)
+├── dao/ → Acceso a datos (DAO + JDBC)
+├── database/ → Configuración de conexión (ConexionBD)
+└── resources/ → Vistas (.fxml) + config.properties
+
+/SQL
+├── CreacionTablas.sql
+├── InsercionDatos.sql
+└── ConsultasPrueba.sql
+
+README.md
+
+## ✅ Estado del Proyecto  
+✔ Base de datos configurada y operativa  
+✔ Conexión mediante JDBC funcional  
+✔ Aplicación completa y en ejecución  
+✔ Código documentado y organizado  
+
+---
+
+## 👩‍💻 Autoría  
+
+**Florencia Otero**  
+Estudiante de **Licenciatura en Informática**  
+Materia: Seminario de Práctica de Informática  
+Universidad Siglo 21 — Año **2025**
+
