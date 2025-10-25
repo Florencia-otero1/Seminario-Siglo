@@ -65,20 +65,25 @@ La conexión se gestiona mediante `ConexionBD.java` y un archivo de propiedades 
 ---
 
 ## 🗃️ Estructura del Proyecto
-/src
-└── com/example/app
-├── controllers/ → Controladores JavaFX
-├── models/ → Clases del modelo (POO)
-├── dao/ → Acceso a datos (DAO + JDBC)
-├── database/ → Configuración de conexión (ConexionBD)
-└── resources/ → Vistas (.fxml) + config.properties
-
-/SQL
-├── CreacionTablas.sql
-├── InsercionDatos.sql
-└── ConsultasPrueba.sql
-
-README.md
+```text
+Project Root
+├─ «OTERO-FLORENCIA»-AP3.pdf             
+├─ SQL/
+│  ├─ CreacionTablas.sql
+│  ├─ InsercionDatos.sql
+│  └─ ConsultasPrueba.sql
+├─ src/
+│  └─ main/
+│     ├─ java/
+│     │  └─ com/example/app/
+│     │     ├─ controllers/
+│     │     ├─ dao/
+│     │     ├─ database/
+│     │     └─ models/
+│     └─ resources/
+│        ├─ config.properties
+│        └─ com/example/app/   (vistas .fxml)
+└─ README.md
 
 ## ✅ Estado del Proyecto  
 ✔ Base de datos configurada y operativa  
