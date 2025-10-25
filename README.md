@@ -3,7 +3,7 @@
 ## 📘 Contexto del Proyecto  
 Este proyecto forma parte del **Trabajo Práctico Integrador** de la materia **Seminario de Práctica de Informática**, correspondiente a la **Licenciatura en Informática** (Universidad Siglo 21).
 
-El sistema permite **registrar casos de mascotas perdidas o encontradas**, **difundirlos públicamente**, **gestionar reportes** (rol administrador) y **registrar donaciones**.  
+El sistema permite **registrar casos de mascotas perdidas, encontradas o animales callejeros**, **difundirlos públicamente**, **gestionar reportes** (rol administrador) y **registrar donaciones**.  
 Su propósito es **centralizar la información** y facilitar la **colaboración comunitaria** para ayudar en la recuperación y bienestar de los animales.
 
 El desarrollo siguió el **Proceso Unificado de Desarrollo (PUD)**, aplicando análisis, diseño y construcción incremental.
