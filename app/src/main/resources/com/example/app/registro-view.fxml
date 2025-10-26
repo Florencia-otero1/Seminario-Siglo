@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.app.controllers.RegistroController">
+    <center>
+        <VBox spacing="12" alignment="CENTER" maxWidth="360">
+            <Label text="Crear cuenta" style="-fx-font-size:18px; -fx-font-weight:bold;"/>
+            <TextField fx:id="txtNombre" promptText="Nombre completo"/>
+            <TextField fx:id="txtEmail" promptText="Email"/>
+            <PasswordField fx:id="txtPassword" promptText="Contraseña"/>
+            <PasswordField fx:id="txtPassword2" promptText="Repetir contraseña"/>
+            <HBox spacing="10">
+                <Button text="Crear" onAction="#onRegistrar"/>
+                <Button text="Volver" onAction="#onVolver"/>
+            </HBox>
+            <Label fx:id="lblEstado" textFill="red"/>
+        </VBox>
+    </center>
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+</BorderPane>

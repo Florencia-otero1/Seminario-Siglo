@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.app.controllers.AdminGestionReportesController"
+      spacing="15" alignment="CENTER"
+      style="-fx-padding: 20; -fx-background-color: #FAFAFA;">
+
+    <Label text="🛡 Gestión de Reportes"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <!-- FILTRO -->
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="🔍 Filtrar por tipo:" style="-fx-font-size: 14px;"/>
+        <ComboBox fx:id="cbFiltro" promptText="Seleccione tipo..."/>
+        <Button text="Mostrar todos" onAction="#onMostrarTodos"
+                style="-fx-background-color: #E0E0E0; -fx-padding: 5 12;"/>
+        <Button text="Pendientes" onAction="#onMostrarPendientes"
+                style="-fx-background-color: #FFF59D; -fx-padding: 5 12;"/>
+    </HBox>
+
+
+    <!-- TABLA -->
+    <TableView fx:id="tablaReportes" prefHeight="300" prefWidth="700">
+        <columns>
+            <TableColumn text="ID" fx:id="colId" prefWidth="50"/>
+            <TableColumn text="Tipo" fx:id="colTipo" prefWidth="120"/>
+            <TableColumn text="Especie" fx:id="colEspecie" prefWidth="120"/>
+            <TableColumn text="Descripción" fx:id="colDescripcion" prefWidth="270"/>
+            <TableColumn text="Ubicación" fx:id="colUbicacion" prefWidth="160"/>
+        </columns>
+    </TableView>
+
+    <!-- BOTONES -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="✅ Aprobar" onAction="#onAprobar"
+                style="-fx-background-color: #81C784; -fx-padding: 8 20; -fx-font-weight: bold;"/>
+        <Button text="❌ Rechazar" onAction="#onRechazar"
+                style="-fx-background-color: #E57373; -fx-padding: 8 20; -fx-font-weight: bold;"/>
+        <Button text="📢 Generar texto para redes" onAction="#onGenerarTexto"
+                style="-fx-background-color: #4FC3F7; -fx-padding: 8 20; -fx-font-weight: bold;"/>
+        <Button text="⬅️ Volver" onAction="#onVolver"
+                style="-fx-padding: 8 20;"/>
+    </HBox>
+
+    <Label fx:id="lblEstado" style="-fx-font-size: 14px; -fx-text-fill: #444;"/>
+
+</VBox>
+

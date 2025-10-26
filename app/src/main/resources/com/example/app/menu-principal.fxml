@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.app.controllers.MenuPrincipalController"
+            style="-fx-background-color: #FAFAFA;">
+
+    <!-- BARRA SUPERIOR -->
+    <top>
+        <ToolBar style="-fx-background-color: #4CAF50;">
+            <Label text="🐾 Sistema de Gestión de Mascotas - Córdoba Capital"
+                   style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Label fx:id="lblUsuario"
+                   style="-fx-text-fill: white; -fx-font-size: 14px;"/>
+            <Button text="🚪 Cerrar sesión" onAction="#onLogout"
+                    style="-fx-background-color: white; -fx-text-fill: #4CAF50; -fx-font-weight: bold;"/>
+        </ToolBar>
+    </top>
+
+    <!-- MENÚ CENTRAL -->
+    <center>
+        <VBox spacing="20" alignment="CENTER"
+              style="-fx-padding: 40 0 0 0;">
+
+            <Label text="Bienvenido/a 👋"
+                   style="-fx-font-size: 26px; -fx-font-weight: bold;"/>
+
+            <Label text="Selecciona una acción:"
+                   style="-fx-font-size: 16px; -fx-text-fill: #555;"/>
+
+            <VBox spacing="18" alignment="CENTER">
+
+                <Button text="🐾 Reportar Mascota"
+                        onAction="#onReportar"
+                        style="-fx-font-size: 16px; -fx-padding: 10 30; -fx-background-color: #FFB74D; -fx-font-weight: bold;"/>
+
+                <Button text="🌍 Difusión de Reportes"
+                        onAction="#onDifusion"
+                        style="-fx-font-size: 16px; -fx-padding: 10 30; -fx-background-color: #4FC3F7; -fx-font-weight: bold;"/>
+
+                <Button text="💖 Donaciones"
+                        onAction="#onDonaciones"
+                        style="-fx-font-size: 16px; -fx-padding: 10 30; -fx-background-color: #E57373; -fx-font-weight: bold;"/>
+
+                <!-- Solo visible para administradores -->
+                <Button fx:id="btnGestionReportes" text="🛡 Validar / Gestionar Reportes"
+                        visible="false"
+                        onAction="#onGestionReportes"
+                        style="-fx-font-size: 16px; -fx-padding: 10 30; -fx-background-color: #9575CD; -fx-font-weight: bold;"/>
+            </VBox>
+        </VBox>
+    </center>
+
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+</BorderPane>

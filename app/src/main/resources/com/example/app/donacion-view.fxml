@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="14" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.app.controllers.DonacionController">
+    <padding>
+        <Insets top="20" right="30" bottom="20" left="30"/>
+    </padding>
+
+    <!-- Título -->
+    <Label text="💖 Registrar Donación"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <Label text="Método de pago:"/>
+    <ComboBox fx:id="cbMetodo" onAction="#onMetodoCambio"/>
+
+    <!-- Monto -->
+    <Label text="Monto a donar:"/>
+    <TextField fx:id="txtMonto" promptText="Ej: 1500.00"/>
+
+
+    <!-- Sección tarjeta -->
+    <VBox fx:id="seccionTarjeta" spacing="10" visible="false">
+        <Label text="Datos de tarjeta" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="txtNombreTarjeta" promptText="Nombre del titular"/>
+        <TextField fx:id="txtNumeroTarjeta" promptText="Número de tarjeta"/>
+        <TextField fx:id="txtVencimiento" promptText="MM/AA"/>
+        <PasswordField fx:id="txtCVV" promptText="CVV"/>
+    </VBox>
+
+    <!-- Sección Transferencia -->
+    <VBox fx:id="seccionTransferencia" spacing="10" visible="false">
+        <Label text="🏦 Datos para transferencia" style="-fx-font-weight: bold;"/>
+        <Label text="Alias: refugio.mascotas.mp"/>
+        <Label text="CBU: 0000003100023456789012"/>
+
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Button text="📎 Seleccionar comprobante" onAction="#onSeleccionarComprobante"/>
+            <Label text="(opcional)" style="-fx-font-size: 11px; -fx-text-fill: gray;"/>
+        </HBox>
+
+        <TextField fx:id="txtComprobante" promptText="Archivo seleccionado..." editable="false"/>
+    </VBox>
+
+
+    <!-- Botones -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="💾 Confirmar Donación" onAction="#onGuardar"/>
+        <Button text="⬅️ Volver" onAction="#onVolver"/>
+    </HBox>
+
+    <!-- Mensaje de estado -->
+    <Label fx:id="lblEstado" style="-fx-font-size: 14px;"/>
+
+</VBox>
