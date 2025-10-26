@@ -1,0 +1,13 @@
+# Archivo de configuración de conexión a la base de datos.
+# Este archivo es una plantilla.
+# Debe copiarse y renombrarse como: config.properties
+# y completarse con las credenciales del entorno local.
+
+# URL de conexión a MySQL
+db.url=jdbc:mysql://localhost:3306/NOMBRE_DE_LA_BASE?useSSL=false&serverTimezone=UTC
+
+# Usuario de MySQL
+db.user=USUARIO_MYSQL
+
+# Contraseña de MySQL
+db.password=CONTRASEÑA_MYSQL
