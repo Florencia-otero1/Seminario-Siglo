@@ -96,10 +96,11 @@ Para ejecutar correctamente el sistema, es necesario configurar la conexión con
    se encuentra el archivo de plantilla: config.properties.example
 3. Este archivo debe copiarse y renombrarse como: config.properties
 4. Completar los datos con las credenciales del entorno local:
+   ```sql
    db.url=jdbc:mysql://localhost:3306/nombre_de_la_bd?useSSL=false&serverTimezone=UTC
    db.user=tu_usuario_mysql
    db.password=tu_contraseña_mysql
-   
+   ```
 ⚠️ Importante:
 El archivo config.properties no se incluye en el repositorio por motivos de seguridad.
 Se proporciona config.properties.example como plantilla para permitir que cualquier usuario configure sus credenciales locales antes de ejecutar el sistema.
