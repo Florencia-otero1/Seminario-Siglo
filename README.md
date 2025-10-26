@@ -67,7 +67,7 @@ La conexión se gestiona mediante `ConexionBD.java` y un archivo de propiedades 
 ## 🗃️ Estructura del Proyecto
 ```text
 Project Root
-├─ «OTERO-FLORENCIA»-AP3.pdf             
+├─ OTERO-FLORENCIA-AP3.pdf             
 ├─ SQL/
 │  ├─ CreacionTablas.sql
 │  ├─ InsercionDatos.sql
@@ -81,11 +81,30 @@ Project Root
 │     │     ├─ database/
 │     │     └─ models/
 │     └─ resources/
-│        ├─ config.properties
+│        ├─ config.properties.example (plantilla de ejemplo)
 │        └─ com/example/app/   (vistas .fxml)
 └─ README.md
 ```
+## 🛠️ Configuración de la Base de Datos (MySQL) y Archivo de Conexión
 
+Para ejecutar correctamente el sistema, es necesario configurar la conexión con la base de datos.
+
+1. Crear la base de datos ejecutando los scripts ubicados en la carpeta **SQL/**:
+   ```sql
+   SOURCE SQL/CreacionTablas.sql;
+   SOURCE SQL/InsercionDatos.sql;   -- opcional (carga datos de prueba)
+2. Dentro de la carpeta: src/main/resources/
+   se encuentra el archivo de plantilla: config.properties.example
+   Este archivo debe copiarse y renombrarse como: config.properties
+3. Completar los datos con las credenciales del entorno local:
+   db.url=jdbc:mysql://localhost:3306/nombre_de_la_bd?useSSL=false&serverTimezone=UTC
+   db.user=tu_usuario_mysql
+   db.password=tu_contraseña_mysql
+   
+⚠️ Importante:
+El archivo config.properties no se incluye en el repositorio por motivos de seguridad.
+Se proporciona config.properties.example como plantilla para permitir que cualquier usuario configure sus credenciales locales antes de ejecutar el sistema.
+  
 ## ✅ Estado del Proyecto  
 ✔ Base de datos configurada y operativa  
 ✔ Conexión mediante JDBC funcional  
